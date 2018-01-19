@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vdhcoapp</id>
+    <version>1.1.2</version>
+    <title>VdhCoApp</title>
+    <authors>mi-g</authors>
+    <licenseUrl>https://github.com/mi-g/vdhcoapp/blob/v1.1.2/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/mi-g/vdhcoapp</projectUrl>
+    <bugTrackerUrl>https://github.com/mi-g/vdhcoapp/issues</bugTrackerUrl>
+    <summary>Companion application for Video DownloadHelper browser add-on</summary>
+    <description>***vdhcoapp*** is a multi-platform (Windows, Mac, Linux) application providing the [Video DownloadHelper](https://downloadhelper.net/) browser add-on with:
+
+- file writing API features that are not available from the browser
+- temporary file name generation
+- launching default application on a data file
+- a build of the [ffmpeg](http://ffmpeg.org/) video converter
+
+***vdhcoapp*** complies with the [native messaging protocol](https://developer.mozilla.org/en-US/Add-ons/WebExtensions/Native_messaging) and is not intended to be used directly from the command line.</description>
+    <tags>vdhcoapp addon download video</tags>
+  </metadata>
+</package>

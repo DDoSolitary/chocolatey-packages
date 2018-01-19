@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wiztree</id>
+	<version>3.17</version>
+    <title>WizTree</title>
+    <authors>Antibody Software</authors>
+	<projectUrl>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</projectUrl>
+    <summary>WizTree finds the files and folders using the most disk space on your hard drive</summary>
+	<description>**"Find the files and folders using the most space on your hard drive - QUICKLY!"**
+
+(WizTree is similar to applications like WinDirStat, TreeSize and Folder Size but is MUCH faster)
+Works on 32 and 64 bit versions of Windows XP, Vista, Windows 7, 8 and 10</description>
+    <tags>wiztree filesystem search find disk file</tags>
+  </metadata>
+</package>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>winapioverride</id>
+    <version>6.5.5</version>
+    <title>WinAPIOverride</title>
+    <authors>Jacquelin POTIER</authors>
+    <projectUrl>http://jacquelin.potier.free.fr/winapioverride32/</projectUrl>
+    <summary>Free Advanced API Monitor, spy or override API or exe internal functions</summary>
+    <description>WinAPIOverride is an advanced api monitoring software for 32 and 64 bits processes.
+You can monitor and/or override any function of a process.
+This can be done for API functions or executable internal functions.
+
+It tries to fill the gap between classical API monitoring softwares and debuggers.
+It can break targeted application before or after a function call, allowing memory or registers changes; and it can directly call functions of the targeted application.</description>
+    <tags>winapioverride winapi windows</tags>
+  </metadata>
+</package>
