@@ -5,6 +5,7 @@
     <version>6.5.5</version>
     <title>WinAPIOverride</title>
     <authors>Jacquelin POTIER</authors>
+    <owners>DDoSolitary</owners>
     <projectUrl>http://jacquelin.potier.free.fr/winapioverride32/</projectUrl>
     <summary>Free Advanced API Monitor, spy or override API or exe internal functions</summary>
     <description>WinAPIOverride is an advanced api monitoring software for 32 and 64 bits processes.
