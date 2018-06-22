@@ -3,7 +3,7 @@
 	unzipLocation = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 	url = 'http://jacquelin.potier.free.fr/exe/winapioverride32_bin.zip'
 	checksumType = 'sha512'
-	checksum = '5c7d7c8b836b61c365028ebbbd44728053f3fb14f1e66e898c94dd748caf10f010a90f98ee6ba9a8cbda653f7f77aa3d5d6b8a2c846a3aea25f914f14f10030c'
+	checksum = 'c70b0f9a1de024b9e5f01c1135fa2628215072f9e385ee8183c2a456cd844debb7d2d094aa2182a0f6b1ae71eb64e1a585539f0dd1b4a77ce9edb651d6a3e012'
 }
 
 Install-ChocolateyZipPackage @packageArgs
