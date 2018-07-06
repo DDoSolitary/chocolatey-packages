@@ -1,11 +1,11 @@
 ﻿$packageArgs = @{
 	packageName = $Env:ChocolateyPackageName
-	url = 'https://github.com/mi-g/vdhcoapp/releases/download/v1.2.3/VdhCoAppSetup-1.2.3.exe'
+	url = 'https://github.com/mi-g/vdhcoapp/releases/download/v1.2.4/VdhCoAppSetup-1.2.4.exe'
 	fileType = 'exe'
 	silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 	softwareName = 'VdhCoApp*'
 	checksumType = 'sha512'
-	checksum = '7aea7a51db75d08a0a76104a6f77f4d7f5d297cb43991ce4395deda1c7943ca25549f339eca8c7754eab77bf42a89a5b9b39eac417318d45ea7eae7549c90bc8'
+	checksum = '29398b38331a2cc98f16b7bc524902f917c372ca4296b9a659d1674d38c37ba1171b3c1388624c7fcc138cb8b9c20c8773482245c1af662e75bb48d8266fd321'
 }
 
 Install-ChocolateyPackage @packageArgs
