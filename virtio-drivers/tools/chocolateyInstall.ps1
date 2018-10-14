@@ -11,7 +11,7 @@ Get-ChocolateyWebFile @downloadArgs
 $extractPath = Join-Path $pkgDir virtio
 7z x $isoPath -o"$extractPath"
 Remove-Item $isoPath
-$arch = if([Environment]::Is64BitOperatingSystem) { 'amd64' } else { 'x86' }
+$arch = if ((Get-OsArchitectureWidth) -eq 64) { 'amd64' } else { 'x86' }
 $os = switch ($Env:OS_NAME) {
 	'Windows 10' { 'w10' }
 	'Windows 8.1' { 'w8.1' }
