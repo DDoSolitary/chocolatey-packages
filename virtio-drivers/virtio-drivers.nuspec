@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>virtio-drivers</id>
+    <version>0.1.160</version>
+    <title>virtIO drivers</title>
+    <authors>Red Hat, Google, Virtuozzo, IBM</authors>
+    <owners>DDoSolitary</owners>
+    <projectUrl>http://www.linux-kvm.org/page/WindowsGuestDrivers</projectUrl>
+    <projectSourceUrl>https://github.com/virtio-win/kvm-guest-drivers-windows</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/virtio-win/kvm-guest-drivers-windows/issues</bugTrackerUrl>
+    <licenseUrl>https://github.com/virtio-win/kvm-guest-drivers-windows/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://wiki.libvirt.org/page/Virtio</docsUrl>
+    <summary>virtIO is a virtualization standard for network and disk device drivers.</summary>
+    <description>Virtio is a virtualization standard for network and disk device drivers where just the guest's device driver "knows" it is running in a virtual environment, and cooperates with the hypervisor. This enables guests to get high performance network and disk operations, and gives most of the performance benefits of paravirtualization.</description>
+    <tags>virtio driver kvm</tags>
+    <dependencies>
+       <dependency id="7zip.portable" />
+    </dependencies>
+  </metadata>
+</package>
