@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>opensc</id>
+    <version>0.19.0</version>
+    <title>OpenSC</title>
+    <authors>OpenSC team</authors>
+    <owners>DDoSolitary</owners>
+	<iconUrl>https://avatars2.githubusercontent.com/u/895249</iconUrl>
+    <projectUrl>https://github.com/OpenSC/OpenSC</projectUrl>
+    <projectSourceUrl>https://github.com/OpenSC/OpenSC</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/OpenSC/OpenSC/issues</bugTrackerUrl>
+    <licenseUrl>https://github.com/OpenSC/OpenSC/blob/master/COPYING</licenseUrl>
+    <docsUrl>https://github.com/OpenSC/OpenSC/wiki</docsUrl>
+	<packageSourceUrl>https://github.com/DDoSolitary/chocolatey-packages</packageSourceUrl>
+    <summary>Open source smart card tools and middleware. PKCS#11/MiniDriver/Tokend</summary>
+    <description>OpenSC provides a set of libraries and utilities to work with smart cards. Its main focus is on cards that support cryptographic operations, and facilitate their use in security applications such as authentication, mail encryption and digital signatures. OpenSC implements the standard APIs to smart cards, e.g. PKCS#11 API, Windows’ Smart Card Minidriver and macOS Tokend.</description>
+	<releaseNotes>https://github.com/OpenSC/OpenSC/releases</releaseNotes>
+    <tags>smartcard driver pkcs11</tags>
+  </metadata>
+</package>
