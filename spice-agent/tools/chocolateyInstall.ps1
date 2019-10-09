@@ -10,4 +10,4 @@ $packageArgs = @{
 }
 Install-ChocolateyZipPackage @packageArgs
 $servicePath = Join-Path (ls -Directory $installPath)[0].FullName vdservice.exe
-New-Service -Name vdservice -BinaryPathName $servicePath -DisplayName 'SPICE VDAgent' -StartupType Automatic
+Invoke-Expression "$servicePath install"
