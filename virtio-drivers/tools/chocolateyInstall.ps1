@@ -38,6 +38,8 @@ foreach ($dir in (Get-ChildItem -Directory $extractPath).FullName) {
 		}
 	}
 }
+Copy-Item [IO.Path]::Combine($extractPath, 'Balloon', $infRelPath, 'blnsvr.exe') $pkgDir
+Invoke-Expression "$(Join-Path $pkgDir 'blnsvr.exe') -i"
 $gaPath = Join-Path $extractPath 'guest-agent\qemu-ga-{0}.msi'
 $installArgs = @{
 	packageName = $Env:ChocolateyPackageName
