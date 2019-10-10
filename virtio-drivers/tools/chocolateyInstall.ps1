@@ -27,7 +27,7 @@ $os = switch ($Env:OS_NAME) {
 }
 $infRelPath = Join-Path $os $arch
 # NetKVM is available for all $infRelPath - I extract the Certificate from there
-$certCatFile = Join-Path $extractPath NetKVM $infDirPath netkvm.cat
+$certCatFile = Join-Path $extractPath NetKVM $infRelPath netkvm.cat
 $certFile = Join-Path $pkgDir RedHat.cer
 $exportType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert;
 $cert = (Get-AuthenticodeSignature $certCatFile).SignerCertificate;
