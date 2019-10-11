@@ -18,6 +18,7 @@ $os = switch ($Env:OS_NAME) {
 	'Windows 8' { 'w8' }
 	'Windows 7' { 'w7' }
 	'Windows XP' { 'xp' }
+	'Windows Server 2019' { '2k19' }
 	'Windows Server 2016' { '2k16' }
 	'Windows Server 2012 R2' { '2k12R2' }
 	'Windows Server 2012' { '2k12' }
