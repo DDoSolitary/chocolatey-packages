@@ -2,4 +2,6 @@
 $infListPath = Join-Path $pkgDir inflist.txt
 Invoke-Expression "$(Join-Path $pkgDir 'blnsvr.exe') -u"
 Get-Content $infListPath | % { pnputil /delete-driver $_ }
-Get-ChildItem Cert:\LocalMachine\TrustedPublisher | ? subject -match 'CN="Red Hat, Inc.", O="Red Hat, Inc.", L=Raleigh, S=North Carolina, C=US' | Remove-Item
+$cert = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2
+$cert.Import((Join-Path $pkgDir 'RedHat.cer'))
+Get-ChildItem (Join-Path Cert:\LocalMachine\TrustedPublisher $cert.Thumbprint) | Remove-Item
