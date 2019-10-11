@@ -29,9 +29,9 @@ $infRelPath = Join-Path $os $arch
 # NetKVM is available for all $infRelPath - I extract the Certificate from there
 $certCatFile = [IO.Path]::Combine($extractPath, 'NetKVM', $infRelPath, 'netkvm.cat')
 $certFile = Join-Path $pkgDir 'RedHat.cer'
-$exportType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert;
+$exportType = [Security.Cryptography.X509Certificates.X509ContentType]::Cert;
 $cert = (Get-AuthenticodeSignature $certCatFile).SignerCertificate;
-[System.IO.File]::WriteAllBytes($certFile, $cert.Export($exportType));
+[IO.File]::WriteAllBytes($certFile, $cert.Export($exportType));
 Import-Certificate -FilePath $certFile -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 $infListPath = Join-Path $pkgDir inflist.txt
 foreach ($dir in (Get-ChildItem -Directory $extractPath).FullName) {
