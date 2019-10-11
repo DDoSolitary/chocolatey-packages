@@ -53,8 +53,8 @@ $installArgs = @{
 	packageName = $Env:ChocolateyPackageName
 	fileType = 'msi'
 	silentArgs = '/qn /norestart'
-	file = $gaPath -f 'x86'
-	file64 = $gaPath -f 'x64'
+	file = $gaPath -f 'i386'
+	file64 = $gaPath -f 'x86_64'
 }
 Install-ChocolateyInstallPackage @installArgs
 Remove-Item -Recurse $extractPath
