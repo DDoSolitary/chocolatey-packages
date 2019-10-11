@@ -32,7 +32,7 @@ $certFile = Join-Path $pkgDir 'RedHat.cer'
 $exportType = [System.Security.Cryptography.X509Certificates.X509ContentType]::Cert;
 $cert = (Get-AuthenticodeSignature $certCatFile).SignerCertificate;
 [System.IO.File]::WriteAllBytes($certFile, $cert.Export($exportType));
-Invoke-Expression "certutil.exe -addstore -f 'TrustedPublisher' $($certFile)"
+Import-Certificate -FilePath $certFile -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
 $infListPath = Join-Path $pkgDir inflist.txt
 foreach ($dir in (Get-ChildItem -Directory $extractPath).FullName) {
 	$infDirPath = (Join-Path $dir $infRelPath)
