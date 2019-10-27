@@ -35,8 +35,7 @@ $cert = (Get-AuthenticodeSignature $certCatFile).SignerCertificate;
 [IO.File]::WriteAllBytes($certFile, $cert.Export($exportType));
 if (Get-Command -Name Import-Certificate -ErrorAction SilentlyContinue) {
 	Import-Certificate -FilePath $certFile -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
-}
-else {
+} else {
 	# Fallback for older Windows versions (Win7, Win Srv 2008R2, ...)
 	Invoke-Expression "certutil.exe -addstore -f 'TrustedPublisher' $($certFile)"
 }
