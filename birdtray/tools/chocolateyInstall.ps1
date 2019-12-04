@@ -1,13 +1,13 @@
 ﻿$packageArgs = @{
 	packageName = $Env:ChocolateyPackageName
-	url = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.6/Birdtray-1.6.1-Win-x86.exe'
-	url64bit = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.6/Birdtray-1.6.1-Win-x64.exe'
+	url = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.7.0/Birdtray-1.7.0-Win-x86.exe'
+	url64bit = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.6/Birdtray-1.7.0-Win-x64.exe'
 	fileType = 'exe'
 	silentArgs = '/allusers /S'
 	softwareName = 'Birdtray*'
 	checksumType = 'sha512'
-	checksum = 'cd079b611b5b1430e2d3273b385e50f9d71f038953ad35cee8c74b53a4032397f6eb00df7f816c0e4b2fac6ac325d4898b2afc7feefa6254a894d0622f0e816f'
-	checksum64 = '9d381d0069393db4e30a2210a3bfb1b7ae55ccb423203df2c073782022804000ed8e1cd3d8a0529c65ee3cb272f2f313f0b72f6c7b3cfa57eaab44e5054d6614'
+	checksum = 'b7aa513145c7ee3ed8edd16fd261887974055c5e0bfaabb53d720086df76fc01f65ea65a49e4e0eb7201d9e47783eb4af79965d116e86f4e7afb3e1fdce21715'
+	checksum64 = 'f531393b6f6e1020dd4eaf7a7aae2ee55ba2541043d96b2d0df6d06d2fbbe4b6f9303212b4920db7a101c25c60b2cea4f83cd258469656cdea6c382bfa82f69f'
 }
 
 Install-ChocolateyPackage @packageArgs
