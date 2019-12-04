@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
 	packageName = $Env:ChocolateyPackageName
 	url = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.7.0/Birdtray-1.7.0-Win-x86.exe'
-	url64bit = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.6/Birdtray-1.7.0-Win-x64.exe'
+	url64bit = 'https://github.com/gyunaev/birdtray/releases/download/RELEASE_1.7.0/Birdtray-1.7.0-Win-x64.exe'
 	fileType = 'exe'
 	silentArgs = '/allusers /S'
 	softwareName = 'Birdtray*'
