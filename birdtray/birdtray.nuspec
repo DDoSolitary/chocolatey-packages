@@ -6,7 +6,7 @@
     <title>Birdtray</title>
     <authors>George Y.</authors>
     <owners>DDoSolitary</owners>
-    <iconUrl>https://cdn.statically.io/gh/gyunaev/birdtray/RELEASE_1.7.0/src/res/birdtray.ico</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/gyunaev/birdtray/RELEASE_1.7.0/src/res/birdtray.svg</iconUrl>
     <projectUrl>https://github.com/gyunaev/birdtray</projectUrl>
     <projectSourceUrl>https://github.com/DDoSolitary/chocolatey-packages/tree/master/birdtray</projectSourceUrl>
     <bugTrackerUrl>https://github.com/gyunaev/birdtray/issues</bugTrackerUrl>
