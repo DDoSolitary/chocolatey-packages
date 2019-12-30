@@ -2,11 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>opensc</id>
-    <version>0.19.0</version>
+    <version>0.20.0</version>
     <title>OpenSC</title>
     <authors>OpenSC team</authors>
     <owners>DDoSolitary</owners>
-    <iconUrl>https://cdn.statically.io/gh/OpenSC/OpenSC/0.19.0/win32/OpenSC.ico</iconUrl>
     <projectUrl>https://github.com/OpenSC/OpenSC</projectUrl>
     <projectSourceUrl>https://github.com/OpenSC/OpenSC</projectSourceUrl>
     <bugTrackerUrl>https://github.com/OpenSC/OpenSC/issues</bugTrackerUrl>
