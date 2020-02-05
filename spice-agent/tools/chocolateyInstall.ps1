@@ -2,11 +2,11 @@
 $packageArgs = @{
 	packageName = $Env:ChocolateyPackageName
 	unzipLocation = $installPath
-	url = 'https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.9.0/vdagent-win-0.9.0-x86.zip'
-	url64Bit = 'https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.9.0/vdagent-win-0.9.0-x64.zip'
+	url = 'https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.10.0/vdagent-win-0.10.0-x86.zip'
+	url64Bit = 'https://www.spice-space.org/download/windows/vdagent/vdagent-win-0.10.0/vdagent-win-0.10.0-x64.zip'
 	checksumType = 'sha512'
-	checksum = '9D2E69B3216FE3A17D65F8138D89E900577E35B0C0002AA3D35A408C1B83F8F52AE54D33307FF8626A64EA4BE2C4B684E2BF0495DA22EFF8618CADD3DFECAFE4'
-	checksum64 = 'D001691B8319DE8111959A86D255F298C466CF495A85277BDFCB070111A962DB3D6B4560ED735F16BC0BFFDA2E44DBDE18D288481EF10F07BFB89E10B744D00E'
+	checksum = '2898a8dfbc7514d01ad0d5b45cebdc6993126d0738183ed7d7c89d72b0af05ee5625d863b8a9a6bf3dafe7ed0009ceb82128cc6f023599512221f8d7d25d3fc3'
+	checksum64 = '205fff5abe58929565638f6bc08213514b71c8437e16402bf895e6344d02e99188a6e159b2af3f918c93034bbf31a800e53cfcb1ddcb7a916ab609d1cd2e6962'
 }
 Install-ChocolateyZipPackage @packageArgs
 $servicePath = Join-Path (ls -Directory $installPath)[0].FullName vdservice.exe

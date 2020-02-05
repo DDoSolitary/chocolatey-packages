@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spice-agent</id>
-    <version>0.9.0</version>
+    <version>0.10.0</version>
     <title>SPICE guest agent</title>
     <authors>Red Hat, Lev Veyde, Grant Williamson</authors>
     <owners>DDoSolitary</owners>
