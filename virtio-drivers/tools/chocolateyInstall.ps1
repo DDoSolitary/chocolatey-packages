@@ -53,11 +53,12 @@ $info.drivers | where { $_.arch -eq $arch -and $_.windows_version -eq $os } | % 
 
 $gaPath = Join-Path $extractPath 'guest-agent\qemu-ga-{0}.msi'
 $installArgs = @{
-	packageName = $Env:ChocolateyPackageName
+	packageName = "QEMU Guest Agent"
 	fileType = 'msi'
 	silentArgs = '/qn /norestart'
 	file = $gaPath -f 'i386'
 	file64 = $gaPath -f 'x86_64'
 }
 Install-ChocolateyInstallPackage @installArgs
+
 Remove-Item -Recurse $extractPath
