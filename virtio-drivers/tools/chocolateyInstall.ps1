@@ -11,7 +11,9 @@ Get-ChocolateyWebFile @downloadArgs
 $extractPath = Join-Path $pkgDir virtio
 7z x $isoPath -o"$extractPath"
 Remove-Item $isoPath
-$arch = if ((Get-OsArchitectureWidth) -eq 64) { 'amd64' } else { 'x86' }
+
+$info = ConvertFrom-Json ([IO.File]::ReadAllText((Join-Path $extractPath 'data/info.json')))
+$arch = if ($Env:PROCESSOR_ARCHITEW6432 -eq $null) { $Env:PROCESSOR_ARCHITECTURE } else { $Env:PROCESSOR_ARCHITEW6432 }
 $os = switch ($Env:OS_NAME) {
 	'Windows 10' { 'w10' }
 	'Windows 8.1' { 'w8.1' }
@@ -26,33 +28,29 @@ $os = switch ($Env:OS_NAME) {
 	'Windows Server 2008' { '2k8' }
 	'Windows Server 2003' { '2k3' }
 }
-$infRelPath = Join-Path $os $arch
+
 # NetKVM is available for all $infRelPath - I extract the Certificate from there
-$certCatFile = [IO.Path]::Combine($extractPath, 'NetKVM', $infRelPath, 'netkvm.cat')
+$netkvm = $info.drivers | where { $_.name -eq 'Red Hat VirtIO Ethernet Adapter' -and $_.arch -eq $arch -and $_.windows_version -eq $os }
+$cert = (Get-AuthenticodeSignature ([IO.Path]::ChangeExtension((Join-Path $extractPath $netkvm.inf_path), '.cat'))).SignerCertificate;
 $certFile = Join-Path $pkgDir 'RedHat.cer'
 $exportType = [Security.Cryptography.X509Certificates.X509ContentType]::Cert;
-$cert = (Get-AuthenticodeSignature $certCatFile).SignerCertificate;
 [IO.File]::WriteAllBytes($certFile, $cert.Export($exportType));
-if (Get-Command -Name Import-Certificate -ErrorAction SilentlyContinue) {
-	Import-Certificate -FilePath $certFile -CertStoreLocation Cert:\LocalMachine\TrustedPublisher
-} else {
-	# Fallback for older Windows versions (Win7, Win Srv 2008R2, ...)
-	Invoke-Expression "certutil.exe -addstore -f 'TrustedPublisher' $($certFile)"
-}
+certutil.exe -addstore -f TrustedPublisher $certFile
+
 $infListPath = Join-Path $pkgDir inflist.txt
-foreach ($dir in (Get-ChildItem -Directory $extractPath).FullName) {
-	$infDirPath = (Join-Path $dir $infRelPath)
-	if (Test-Path $infDirPath) {
-		foreach ($infPath in (Get-ChildItem (Join-Path $infDirPath *.inf)).FullName) {
-			$output = pnputil /add-driver $infPath /install
-			if ($output[4] -match '^Published Name: *(.*)') {
-				Add-Content -Path $infListPath -Value $Matches[1]
-			}
-		}
+$info.drivers | where { $_.arch -eq $arch -and $_.windows_version -eq $os } | % {
+	$infPath = Join-Path $extractPath $_.inf_path
+	$output = pnputil.exe /add-driver $infPath /install
+	echo $output
+	if ($output[4] -match '^Published Name: *(.*)') {
+		Add-Content -Path $infListPath -Value $Matches[1]
+	}
+	if ($_.name -eq 'VirtIO Balloon Driver') {
+		Copy-Item (Join-Path (Split-Path -Parent $infPath) blnsvr.exe) $pkgDir
+		Invoke-Expression "$(Join-Path $pkgDir 'blnsvr.exe') -i"
 	}
 }
-Copy-Item ([IO.Path]::Combine($extractPath, 'Balloon', $infRelPath, 'blnsvr.exe')) $pkgDir
-Invoke-Expression "$(Join-Path $pkgDir 'blnsvr.exe') -i"
+
 $gaPath = Join-Path $extractPath 'guest-agent\qemu-ga-{0}.msi'
 $installArgs = @{
 	packageName = $Env:ChocolateyPackageName
