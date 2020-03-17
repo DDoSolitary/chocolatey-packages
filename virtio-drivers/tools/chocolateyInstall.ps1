@@ -42,7 +42,7 @@ $info.drivers | where { $_.arch -eq $arch -and $_.windows_version -eq $os } | % 
 	$infPath = Join-Path $extractPath $_.inf_path
 	$output = pnputil.exe /add-driver $infPath /install
 	echo $output
-	if ($output[4] -match '^Published Name: *(.*)') {
+	if ($output[4] -match '^[^:]*: *(.*)') {
 		Add-Content -Path $infListPath -Value $Matches[1]
 	}
 	if ($_.name -eq 'VirtIO Balloon Driver') {
