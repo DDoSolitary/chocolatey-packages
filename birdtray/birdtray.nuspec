@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>birdtray</id>
-    <version>1.7.0</version>
+    <version>1.8.0</version>
     <title>Birdtray</title>
     <authors>George Y.</authors>
     <owners>DDoSolitary</owners>
-    <iconUrl>https://cdn.statically.io/gh/gyunaev/birdtray/RELEASE_1.7.0/src/res/birdtray.svg</iconUrl>
+    <iconUrl>https://cdn.statically.io/gh/gyunaev/birdtray/1.8.0/src/res/birdtray.svg</iconUrl>
     <projectUrl>https://github.com/gyunaev/birdtray</projectUrl>
     <projectSourceUrl>https://github.com/DDoSolitary/chocolatey-packages/tree/master/birdtray</projectSourceUrl>
     <bugTrackerUrl>https://github.com/gyunaev/birdtray/issues</bugTrackerUrl>
