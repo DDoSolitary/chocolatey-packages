@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winapioverride</id>
-    <version>6.6.6</version>
+    <version>6.7.2</version>
     <title>WinAPIOverride</title>
     <authors>Jacquelin POTIER</authors>
     <owners>DDoSolitary</owners>
