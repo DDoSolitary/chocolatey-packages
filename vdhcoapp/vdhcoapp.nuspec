@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vdhcoapp</id>
-    <version>1.5.0</version>
+    <version>1.6.0</version>
     <title>VdhCoApp</title>
     <authors>mi-g</authors>
     <owners>DDoSolitary</owners>
-    <licenseUrl>https://github.com/mi-g/vdhcoapp/blob/v1.5.0/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/mi-g/vdhcoapp/blob/v1.6.0/LICENSE.txt</licenseUrl>
     <projectUrl>https://github.com/mi-g/vdhcoapp</projectUrl>
     <bugTrackerUrl>https://github.com/mi-g/vdhcoapp/issues</bugTrackerUrl>
     <summary>Companion application for Video DownloadHelper browser add-on</summary>
