@@ -3,9 +3,9 @@ $isoPath = Join-Path $pkgDir virtio.iso
 $downloadArgs = @{
 	packageName = $Env:ChocolateyPackageName
 	fileFullPath = $isoPath
-	url = 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.196-1/virtio-win.iso'
+	url = 'https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.204-1/virtio-win.iso'
 	checksumType = 'sha512'
-	checksum = '0438380e5c9bc680104268a826c47f817b086522a94d3b25cce363a6cd2026240ae52e25eff19aa450f3aad83b99485cccacbe7f8e697bc18a309f5b1d680b39'
+	checksum = 'dd28dd18e4189a950f62cb9c5553f79c98daa1dbf9d945c30f1cfc6ded9861f57d7cb692c54af20ebe58eadf0a987c3dcf3cd3c2ad6fff700ca1d149923aacb3'
 }
 Get-ChocolateyWebFile @downloadArgs
 $extractPath = Join-Path $pkgDir virtio
