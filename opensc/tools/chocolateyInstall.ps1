@@ -1,16 +1,16 @@
 ﻿$packageArgs = @{
 	packageName = $Env:ChocolateyPackageName
-	url = 'https://github.com/OpenSC/OpenSC/releases/download/0.21.0/OpenSC-0.21.0_win32.msi'
+	url = 'https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win32.msi'
 	fileType = 'msi'
 	silentArgs = '/qn /norestart'
 	checksumType = 'sha512'
-	checksum = 'f7945de5a397c65c220c93de65c311d0c5d448fa9968df495d169ef6263481322b53e402dcda40f4a18c475a1fe66815565456b322333e2b439fa318b61fccca'
+	checksum = '557f1f6e865d24b3b6ee2ef385ed715bd4533f88d5af4c1454bbffdd4d51c29855fa328a1dbfc35a464d9810ead9be199c24ee452e2f6f38d8ab9b9864f30819'
 }
 
 Install-ChocolateyPackage @packageArgs
 
 if ((Get-OsArchitectureWidth) -eq 64) {
-	$packageArgs.url = 'https://github.com/OpenSC/OpenSC/releases/download/0.21.0/OpenSC-0.21.0_win64.msi'
-	$packageArgs.checksum = '46298566e49bdedad4fc7d1e1daf950c7dafbbd0187ab28b68e56902e6cd4488d1bdc7b26eaf053ea353c9d65162943c991912ec409d9a71f87a25b8d1a49858'
+	$packageArgs.url = 'https://github.com/OpenSC/OpenSC/releases/download/0.22.0/OpenSC-0.22.0_win64.msi'
+	$packageArgs.checksum = '54790360cf072207a5b86710cf5d2d5808c4a1d3e94e89b0ed611370371afeec590de5573759fa12e19f10e35b3f396b77ab66791d66e6bc6d68ec24a6cc2d3c'
 	Install-ChocolateyPackage @packageArgs
 }
