@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>virtio-drivers</id>
-    <version>0.1.204.100</version>
+    <version>0.1.208.100</version>
     <title>virtIO drivers</title>
     <authors>Red Hat, Google, Virtuozzo, IBM</authors>
     <owners>DDoSolitary</owners>
